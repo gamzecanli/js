@@ -12,7 +12,7 @@
 </table>
 <button onclick="kaydet()">Kaydet </button>
 
-<table id="iceriktablosu">
+<table id="iceriktablosu"  border="1">
 
 </table>
 <script>
@@ -20,5 +20,9 @@ function kaydet(){
 var satir=document.getElementById('satir').value;
 var sutun=document.getElementById('sutun').value;
 var icerik=document.getElementById('icerik').value;
+var htmlcontent="<tr><td> "+icerik+"</td></tr>";
+var iceriktablosu=document.getElementById('iceriktablosu');
+iceriktablosu.innerHTML=iceriktablosu.innerHTML+htmlcontent;
+
 }
 </script>
