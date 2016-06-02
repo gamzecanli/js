@@ -4,6 +4,7 @@
   <td>sutun</td>
   <td>içerik</td>
 </tr>
+
 <tr>
   <td><input id="satir"></td>
   <td><input id="sutun"></td>
@@ -13,16 +14,30 @@
 <button onclick="kaydet()">Kaydet </button>
 
 <table id="iceriktablosu"  border="1">
-
+<tr><td>Row1 cell1</td>  
+<td>Row1 cell2</td></tr>  
+<tr><td>Row2 cell1</td>  
+<td>Row2 cell2</td></tr>  
+<tr><td>Row3 cell1</td>  
+<td>Row3 cell2</td></tr>  
 </table>
+
+
 <script>
 function kaydet(){
+
 var satir=document.getElementById('satir').value;
 var sutun=document.getElementById('sutun').value;
 var icerik=document.getElementById('icerik').value;
-var htmlcontent="<tr><td> "+icerik+"</td></tr>";
-var iceriktablosu=document.getElementById('iceriktablosu');
-iceriktablosu.innerHTML=iceriktablosu.innerHTML+htmlcontent;
 
+var rowIndex =document.getElementById('satir').value;
+var cellIndex =document.getElementById('sutun').value;
+
+var x=document.getElementById('iceriktablosu').rows[rowIndex].cells[cellIndex];
+x.innerHTML=icerik;
+
+console.log(rowIndex)
+console.log(cellIndex)
+console.log(icerik)
 }
 </script>
