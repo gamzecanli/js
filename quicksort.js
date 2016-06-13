@@ -15,7 +15,7 @@ function quicksort(arr)
            
         } else {
            right.push(arr[i]);
-           console.log(arr)
+           
         }
     }
  
